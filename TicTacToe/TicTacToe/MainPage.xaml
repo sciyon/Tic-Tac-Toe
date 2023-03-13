@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TicTacToe.MainPage"
+             Title="TicTacToe">
+    <Grid ColumnSpacing="2.5" RowSpacing="2.5" BackgroundColor="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".7*"/>
+            <RowDefinition Height=".7*"/>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height=".25*"/>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height=".5*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Display -->
+        <Label 
+            x:Name="AppName"
+            Text="Tic-Tac-Toe"
+            FontSize="32"
+            FontAttributes="Bold"
+            BackgroundColor="White"
+            TextColor="#6b6b6b"
+            Grid.ColumnSpan="5"
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"
+            Padding="8,4"
+        />
+        <!-- Game Status -->
+        <Label
+            x:Name="Status"
+            Text="X player's turn"    
+            FontSize="24"
+            BackgroundColor="White"
+            TextColor="Red"
+            Grid.Row="1"
+            Grid.ColumnSpan="5"
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"
+            Padding="8,4"
+        />
+        <!-- Play Area -->
+
+        <Button x:Name="Button00" Text="-"  FontSize="16" Grid.Row="2" Grid.Column="1" BackgroundColor="Gray" TextColor="Black" Clicked="OnBlockClicked"/>
+        <Button x:Name="Button01" Text="-"  FontSize="16" Grid.Row="2" Grid.Column="2" BackgroundColor="Gray" TextColor="Black" Clicked="OnBlockClicked"/>
+        <Button x:Name="Button02" Text="-"  FontSize="16" Grid.Row="2" Grid.Column="3" BackgroundColor="Gray" TextColor="Black" Clicked="OnBlockClicked"/>
+        <Button x:Name="Button10" Text="-"  FontSize="16" Grid.Row="3" Grid.Column="1" BackgroundColor="Gray" TextColor="Black" Clicked="OnBlockClicked"/>
+        <Button x:Name="Button11" Text="-"  FontSize="16" Grid.Row="3" Grid.Column="2" BackgroundColor="Gray" TextColor="Black" Clicked="OnBlockClicked"/>
+        <Button x:Name="Button12" Text="-"  FontSize="16" Grid.Row="3" Grid.Column="3" BackgroundColor="Gray" TextColor="Black" Clicked="OnBlockClicked"/>
+        <Button x:Name="Button20" Text="-"  FontSize="16" Grid.Row="4" Grid.Column="1" BackgroundColor="Gray" TextColor="Black" Clicked="OnBlockClicked"/>
+        <Button x:Name="Button21" Text="-"  FontSize="16" Grid.Row="4" Grid.Column="2" BackgroundColor="Gray" TextColor="Black" Clicked="OnBlockClicked"/>
+        <Button x:Name="Button22" Text="-"  FontSize="16" Grid.Row="4" Grid.Column="3" BackgroundColor="Gray" TextColor="Black" Clicked="OnBlockClicked"/>
+        <!-- Reset -->
+
+        <Button Text="Reset" HeightRequest="10" FontSize="16" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3" BackgroundColor="Green" TextColor="Black" Clicked="OnResetClicked"/>
+
+    </Grid>
+</ContentPage>
