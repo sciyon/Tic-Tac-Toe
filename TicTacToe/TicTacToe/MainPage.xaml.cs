@@ -89,12 +89,12 @@ namespace TicTacToe
             moves++;
             if(moves >= 5)//minimum amount of moves that can result a win //less computation time or somthing, idk
             {
-                checkForWin();
+                CheckForWin();
             }
 
         }
 
-        void checkForWin()
+        void CheckForWin()
         {
             for(int row = 0; row < 3; row++) //row check
             {
