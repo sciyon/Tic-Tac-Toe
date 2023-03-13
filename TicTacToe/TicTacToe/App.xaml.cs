@@ -1,6 +1,4 @@
 ﻿using System;
-using TicTacToe.Services;
-using TicTacToe.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
